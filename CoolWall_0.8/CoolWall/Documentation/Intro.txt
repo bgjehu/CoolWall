@@ -1,0 +1,17 @@
+﻿The data model behind the application is:
+1.	one main form with notifyicon and menustrip as main control
+2.	main form has a list of frames(forms which display pictures)
+3.	frame itself has no border, frame consists of a panel with picturebox in it
+4.	the panel is for display border for the picture, border would be made by display image
+5.	frame(the form) would also have a data model called frameconfig
+6.	frameconfig is a json object which has attribute
+		image:						Base64string
+		location(form's):			Point
+		size(display/actual size):	double
+		opacity:					double
+		visible:					bool
+		topmost:					bool
+		locked:						bool
+7.	the panel and the form are going to be autosize(growandshrink) 
+	and the margin of the picturebox going to be show as border
+	and the location of the picturebox is going to equal to the margin
